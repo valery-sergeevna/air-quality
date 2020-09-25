@@ -1,0 +1,102 @@
+.hero {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/hero-bg.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:100vh;
+    padding: 5px 90px 60px;
+    position: relative;
+    @media (max-width:780px){
+        padding-left:40px;
+        padding-right:40px;
+      }
+    @media (max-width:550px){
+        padding:10px;
+        // min-height:660px;
+    }
+      
+    .partners {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height:18vh;
+      max-width:700px;
+      @media (max-width:780px){
+        max-width: 400px;
+      }
+      @media (max-width:550px){
+        max-width: 300px;
+      }
+      @media (max-width:420px){
+        max-width: 250px;
+      }
+      &__item{
+        @media (max-width:780px){
+            max-width: 30%;
+          }
+      }
+    }
+  
+    .nav {
+      min-height:15vh;
+      display: flex;
+      align-items: center;
+      &__item {
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: #fff;
+        margin-left: 74px;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      @media (max-width:780px){
+        display: none;
+      }
+    }
+  
+    &__title {
+      max-width: 664px;
+      min-height:35vh;
+      font-weight: normal;
+      font-size: 5.7rem;
+      line-height: 6.7rem;
+      color: #fff;
+      margin-top: 10vh;
+      @media (max-width:550px){
+        width:100%;
+        bottom:0;
+        left:0;
+        font-size: 3.5rem;
+      }
+    }
+  
+    &__link {
+      position: absolute;
+      bottom:50px;
+      left:90px;
+      display: inline-block;
+      padding: 30px 120px;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 3.2rem;
+      line-height: 3.7rem;
+      color: #fff;
+      background: #B78A3F;
+      text-align: center;
+     
+      @media (max-width:780px){
+        left:40px;
+      }
+      @media (max-width:550px){
+        width:100%;
+        bottom:60px;
+        left:0;
+        font-size: 3.2rem;
+        padding: 20px 0;
+      }
+    }
+  }
