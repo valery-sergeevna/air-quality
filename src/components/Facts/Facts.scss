@@ -42,4 +42,7 @@
     .swiper-pagination-bullet-active{
         background-color: #B78A3F;
     }
+    & > .swiper-button-disabled{
+        opacity:0;
+    }
 }

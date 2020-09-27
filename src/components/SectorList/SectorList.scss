@@ -1,0 +1,64 @@
+.sectors{
+    text-align: center;
+    padding: 40px 0 120px;
+    &__title{
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 41px;
+        color: #fff;
+        margin: 101px 0 40px;
+    }
+    &__subtitle{
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 27px;
+        color: #fff;
+    }
+    &-list{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:wrap;
+        margin-top: 30px;
+        &__item{
+            width: calc((100%/3) - 70px);
+            margin-bottom:30px;
+            min-height:240px;
+            position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+    }
+    &-item{
+        &__tooltip{
+            position: absolute;
+            left: 100%;
+            width: 440px;
+            pointer-events: none;
+            appearance: none;
+            background-color: #DADADA;
+            padding: 16px 16px 16px 75px;
+            clip-path: polygon(100% 0, 100% 100%, 75px 100%, 0 50%, 75px 0);
+            //opacity: 0;
+            z-index: 1;
+            font-size: 19px;
+            line-height: 22px;
+            &-switched{
+                left:initial;
+                right:100%;
+                padding: 16px 75px 16px 16px;
+                clip-path: polygon(calc(100% - 75px) 0, 100% 50%, calc(100% - 75px) 100%, 0 100%, 0 0);
+            }
+        }
+        &__name{
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 27px;
+            color: #222222;
+            background: rgba(255, 255, 255, 0.83);
+            width:100%;
+        }
+    }
+}
