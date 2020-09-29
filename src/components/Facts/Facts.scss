@@ -2,12 +2,24 @@
     padding: 100px 60px 50px;
     color:#fff;
     position: relative;
+    &__slide{
+        text-align: center;
+        img{
+            @media(max-width:420px){
+            height:400px;
+            }
+        }
+    }
     &__title{
         font-weight: normal;
         font-size: 3.5rem;
         line-height: 4.1rem;
         text-align: center;
         margin-bottom: 30px;
+        @media(max-width: 420px){
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
     }
     &__desc{
         font-weight: normal;
@@ -15,6 +27,10 @@
         line-height: 3.2rem;
         text-align: center;
         margin-top: 40px;
+        @media(max-width:550px){
+            font-size: 1.88rem;
+            line-height: 2.22rem;
+        }
     }
     .swiper-button-prev, 
     .swiper-button-next{
@@ -22,9 +38,15 @@
     }
     .swiper-button-prev{
         left:30px;
+        @media(max-width: 550px){
+            left:15px;
+        }
     }
     .swiper-button-next{
         right:30px;
+        @media(max-width: 550px){
+            right:15px;
+        }
     }
     &-pagination{
         text-align: center;
@@ -37,6 +59,11 @@
             border: 2px solid #B78A3F;
             background-color: transparent;
             opacity:1;
+            @media(max-width: 550px){
+                width:12px;
+                height:12px;
+                margin: 20px 12px 0;
+            }
         }
     }
     .swiper-pagination-bullet-active{
@@ -46,3 +73,4 @@
         opacity:0;
     }
 }
+

@@ -35,7 +35,23 @@ const Facts = ({ title, slides }) => {
                     spaceBetween={40}
                     slidesPerGroup={3}
                     loop={true}
-                    loopFillGroupWithBlank={true}>
+                    loopFillGroupWithBlank={true}
+                    breakpoints={{
+                        1280: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 3,
+                        },
+                        900: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            centeredSlides: true,
+                        }
+                    }}
+                >
                     {factsSlides}
                 </Swiper>
                 <div className="swiper-button-next"></div>

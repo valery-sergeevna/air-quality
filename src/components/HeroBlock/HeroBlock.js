@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeroBlock.scss';
+import Navbar from '../Nav/Navbar';
 
 const HeroBlock = ({ title, links, logos }) => {
     const logosImages = logos.map((logoItem, i) => <img key={i} src={logoItem} alt="partner-logo" className="partners__item" />);
@@ -7,6 +8,7 @@ const HeroBlock = ({ title, links, logos }) => {
 
     return (
         <section className="hero">
+            <Navbar></Navbar>
             <div className="container">
                 <div className="partners">
                     {logosImages}
@@ -16,6 +18,7 @@ const HeroBlock = ({ title, links, logos }) => {
                 </nav>
                 <h1 className="hero__title">{title}</h1>
                 <a href="check" className="hero__link">Отследить</a>
+                <div className="hero__arrow"></div>
             </div>
         </section>
     );

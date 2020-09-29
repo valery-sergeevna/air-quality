@@ -5,11 +5,11 @@ import HeroBlock from './components/HeroBlock/HeroBlock';
 import Facts from './components/Facts/Facts';
 import SectorList from './components/SectorList/SectorList';
 import Footer from './components/Footer/Footer';
+import Navbar from './components/Nav/Navbar';
 import AirQuality from './components/AirQuality/AirQuality';
 import shidLogo from './assets/shid_emozhl_logo.png';
 import ITNLogo from './assets/ITN_logo.svg';
 import globalLogo from './assets/global__logo.svg';
-
 
 function App() {
 
@@ -95,14 +95,14 @@ function App() {
     }
   ];
 
-  const author = "Валерией Сергеевной";
+  const author = "Валерией Гнидиной";
   const designer = "Валерией Бубырь";
 
   return (
     <>
-      <HeroBlock title="Качество атмосферного воздуха и здоровье"
-        logos={partners}
-        links={navLinks} />
+      <HeroBlock title="Качество атмосферного воздуха и здоровье" logos={partners}
+        links={navLinks}>
+      </HeroBlock>
       <Facts title="Основные факты" slides={factSlides} />
       <AirQuality />
       <SectorList title="Политика по уменьшению загрязнений"
