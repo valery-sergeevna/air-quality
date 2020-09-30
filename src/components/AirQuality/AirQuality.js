@@ -13,6 +13,7 @@ const AirQuality = () => {
         zoom: 4.82,
     });
 
+    //add map
     let map;
     useEffect(() => {
         map = new mapboxgl.Map({
@@ -21,36 +22,37 @@ const AirQuality = () => {
             center: [locationInfo.lng, locationInfo.lat],
             zoom: locationInfo.zoom
         });
-        //control map
+        //add map controls 
         let nav = new mapboxgl.NavigationControl();
         map.addControl(nav, 'bottom-left');
         map.addControl(new mapboxgl.FullscreenControl());
 
-        let markerone = new mapboxgl.Marker({ "color": "rgb(255, 0, 0)" })
+        //add markers to the map
+        let markerOne = new mapboxgl.Marker({ "color": "rgb(255, 0, 0)" })
             .setLngLat([37.54131, 47.09514])
             .setPopup(new mapboxgl.Popup().setHTML("Нездоровый: <strong>163</strong>"))
             .addTo(map);
-        let markertwo = new mapboxgl.Marker({ "color": "rgb(255, 0, 0)" })
+        let markerTwo = new mapboxgl.Marker({ "color": "rgb(255, 0, 0)" })
             .setLngLat([37.8022, 48.023])
             .setPopup(new mapboxgl.Popup().setHTML("Нездоровый: <strong>169</strong>"))
             .addTo(map);
-        let markerthree = new mapboxgl.Marker({ "color": "#EEE851" })
+        let markerThree = new mapboxgl.Marker({ "color": "#EEE851" })
             .setLngLat([24.70972, 48.9215])
             .setPopup(new mapboxgl.Popup().setHTML("Умеренный: <strong>58</strong>"))
             .addTo(map);
-        let markerfour = new mapboxgl.Marker({ "color": "#96D962" })
+        let markerFour = new mapboxgl.Marker({ "color": "#96D962" })
             .setLngLat([30.5238, 50.4547])
             .setPopup(new mapboxgl.Popup().setHTML("Высокий: <strong>13</strong>"))
             .addTo(map);
-        let markerfive = new mapboxgl.Marker({ "color": "#96D962" })
+        let markerFive = new mapboxgl.Marker({ "color": "#96D962" })
             .setLngLat([36.25272, 49.98081])
             .setPopup(new mapboxgl.Popup().setHTML("Высокий: <strong>20</strong>"))
             .addTo(map);
-        let markersix = new mapboxgl.Marker({ "color": "#FFBD3E" })
+        let markerSix = new mapboxgl.Marker({ "color": "#FFBD3E" })
             .setLngLat([35.1903, 47.8229])
             .setPopup(new mapboxgl.Popup().setHTML("Нездоровый для чувствительных групп: <strong>114</strong>"))
             .addTo(map);
-        let markerseven = new mapboxgl.Marker({ "color": "#96D962" })
+        let markerSeven = new mapboxgl.Marker({ "color": "#96D962" })
             .setLngLat([30.72771, 46.482])
             .setPopup(new mapboxgl.Popup().setHTML("Высокий: <strong>1</strong>"))
             .addTo(map);

@@ -1,17 +1,18 @@
 import React from 'react';
 import SlideFacts from './SlideFacts';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import './Facts.scss';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 
 const Facts = ({ title, slides }) => {
-    const factsSlides = slides.map((slide) => <SwiperSlide>
+    const factsSlides = slides.map((slide, i) => <SwiperSlide key={i}>
         <SlideFacts item={slide} key={slide.id} />
     </SwiperSlide>);
     return (
@@ -34,21 +35,25 @@ const Facts = ({ title, slides }) => {
                     slidesPerView={3}
                     spaceBetween={40}
                     slidesPerGroup={3}
-                    loop={true}
-                    loopFillGroupWithBlank={true}
                     breakpoints={{
                         1280: {
                             slidesPerView: 3,
                             slidesPerGroup: 3,
                         },
-                        900: {
+                        768: {
                             slidesPerView: 2,
                             slidesPerGroup: 2,
                         },
                         320: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                             slidesPerGroup: 1,
                             centeredSlides: true,
+                            spaceBetween: 0,
+                            effect: 'coverflow',
+                            coverflowEffect: {
+                                rotate: 0,
+                                slideShadows: false,
+                            }
                         }
                     }}
                 >

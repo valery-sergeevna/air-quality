@@ -5,7 +5,6 @@ import HeroBlock from './components/HeroBlock/HeroBlock';
 import Facts from './components/Facts/Facts';
 import SectorList from './components/SectorList/SectorList';
 import Footer from './components/Footer/Footer';
-import Navbar from './components/Nav/Navbar';
 import AirQuality from './components/AirQuality/AirQuality';
 import shidLogo from './assets/shid_emozhl_logo.png';
 import ITNLogo from './assets/ITN_logo.svg';

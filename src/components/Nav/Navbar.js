@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.scss';
 
 const Navbar = () => {
+    //state of open/hide hamburger-menu
     const [isMenuShowing, setMenuShowing] = useState(false);
     const toggleMenu = () => {
         setMenuShowing(!isMenuShowing);
@@ -12,6 +13,7 @@ const Navbar = () => {
                 <span></span>
             </div>
             {
+                //open/hide hamburger-menu
                 isMenuShowing && <div className="menu-nav">
                     <div className="close" onClick={toggleMenu}></div>
                     <div className="hamburger hamb-in-menu">
