@@ -7,6 +7,10 @@
     padding: 5px 90px 60px;
     position: relative;
     min-height:500px;
+    @media (min-width:1400px){
+        padding-left:20px;
+        padding-right:40px;
+      }
     @media (max-width:780px){
         padding-left:40px;
         padding-right:40px;
@@ -71,6 +75,7 @@
       font-size: 5.7rem;
       line-height: 6.7rem;
       color: #fff;
+      margin-bottom:20px;
       @media (max-width:768px){
         padding-top: 20vh;
       }
@@ -88,9 +93,6 @@
     }
   
     &__link {
-      position: absolute;
-      bottom:50px;
-      left:90px;
       display: inline-block;
       padding: 30px 120px;
       text-decoration: none;
@@ -104,11 +106,9 @@
       &:hover{
         background: darken(#B78A3F, 20%);
       }
-     
-      @media (max-width:780px){
-        left:40px;
-      }
+    
       @media (max-width:550px){
+        position:absolute;
         width:100%;
         bottom:60px;
         left:0;
